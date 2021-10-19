@@ -38,6 +38,7 @@ public class GetListPresenter<Request, Response, Interactor: UseCase>: Observabl
         }
       }, receiveValue: { list in
         self.list = list
+        print("VALUE", list)
       })
       .store(in: &cancellables)
   }
