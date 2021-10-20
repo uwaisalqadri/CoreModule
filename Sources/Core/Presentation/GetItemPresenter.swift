@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-public class Presenter<Request, Response, Interactor: UseCase>: ObservableObject where Interactor.Request == Request, Interactor.Response == Response {
+public class GetItemPresenter<Request, Response, Interactor: UseCase>: ObservableObject where Interactor.Request == Request, Interactor.Response == Response {
 
   private var cancellables: Set<AnyCancellable> = []
 
