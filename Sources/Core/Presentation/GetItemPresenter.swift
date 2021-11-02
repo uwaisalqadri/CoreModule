@@ -38,7 +38,6 @@ public class GetItemPresenter<Request, Response, Interactor: UseCase>: Observabl
         }
       }, receiveValue: { item in
         self.item = item
-        print("VALUE", item)
       })
       .store(in: &cancellables)
   }
