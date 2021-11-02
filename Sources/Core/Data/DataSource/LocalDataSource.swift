@@ -15,5 +15,5 @@ public protocol LocalDataSource {
   func list(request: Request?) -> AnyPublisher<[Response], Error>
   func add(entity: Response) -> AnyPublisher<Response, Error>
   func delete(entity: Response) -> AnyPublisher<Response, Error>
-  func get(entityId: Int) -> AnyPublisher<Response, Error>
+  func get(entityId: Int) -> Response?
 }
