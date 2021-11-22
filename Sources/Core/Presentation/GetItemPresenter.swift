@@ -29,7 +29,7 @@ public class GetItemPresenter<Request, Response, Interactor: UseCase>: Observabl
       .receive(on: RunLoop.main)
       .sink(receiveCompletion: { completion in
         switch completion {
-        case .failure (let error):
+        case .failure(let error):
           self.errorMessage = error.localizedDescription
           self.isError = true
           self.isLoading = false
@@ -39,10 +39,7 @@ public class GetItemPresenter<Request, Response, Interactor: UseCase>: Observabl
       }, receiveValue: { item in
         self.item = item
         self.isLoading = false
-        print("VALUE CORE", item)
       })
       .store(in: &cancellables)
   }
 }
-
-
