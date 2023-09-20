@@ -12,8 +12,8 @@ public protocol LocalDataSource {
   associatedtype Request
   associatedtype Response
 
-  func list(request: Request?) -> AnyPublisher<[Response], Error>
-  func add(entity: Response) -> AnyPublisher<Response, Error>
-  func delete(entity: Response) -> AnyPublisher<Response, Error>
-  func get(entityId: String) -> AnyPublisher<Response, Error>
+  func list(request: String?) -> AnyPublisher<[Response], Error>
+  func add(entity: Response) -> AnyPublisher<Bool, Error>
+  func delete(id: String) -> AnyPublisher<Bool, Error>
+  func isFavorited(id: String) -> AnyPublisher<Bool, Error>
 }
