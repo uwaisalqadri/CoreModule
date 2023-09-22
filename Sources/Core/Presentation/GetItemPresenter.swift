@@ -22,10 +22,10 @@ public struct Presenter<Request, Response, Interactor: UseCase>: Reducer where I
       return true
     }
     
-    var item: Response?
-    var errorMessage: String = ""
-    var isLoading: Bool = false
-    var isError: Bool = false
+    public var item: Response?
+    public var errorMessage: String = ""
+    public var isLoading: Bool = false
+    public var isError: Bool = false
   }
   
   public enum Action: Equatable {
