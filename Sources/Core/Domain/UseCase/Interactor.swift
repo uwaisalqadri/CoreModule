@@ -17,7 +17,7 @@ where R.Request == Request, R.Response == Response {
     self.repository = repository
   }
 
-  public func execute(request: Request?) -> AnyPublisher<Response, Error> {
-    repository.execute(request: request)
+  public func execute(request: Request?) async throws -> Response {
+    try await repository.execute(request: request)
   }
 }

@@ -12,5 +12,5 @@ public protocol DataSource {
   associatedtype Request
   associatedtype Response
 
-  func execute(request: Request?) -> AnyPublisher<Response, Error>
+  func execute(request: Request?) async throws -> Response
 }

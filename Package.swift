@@ -13,11 +13,14 @@ let package = Package(
     ),
   ],
   dependencies: [
+    .package(name: "ComposableArchitecture", url: "https://github.com/pointfreeco/swift-composable-architecture.git", .branch("main")),
   ],
   targets: [
     .target(
       name: "Core",
-      dependencies: []
+      dependencies: [
+        "ComposableArchitecture"
+      ]
     ),
     .testTarget(
       name: "CoreTests",
